@@ -4,6 +4,8 @@
 
 This document outlines the comprehensive roadmap for the SI08 module focused on Advanced Data Engineering and Software Engineering practices. The module emphasizes modern data architecture, clean code practices, and professional development workflows.
 
+![Project Artifacts Delivery Timeline](/assets/artifacts_gantt.png)
+
 ## Module Structure
 
 ### Week 02 - Advanced Exploratory Data Analysis & Data Architecture

@@ -2,6 +2,8 @@
 
 ## Sprint 1 - Weeks 1-2 Activities Overview
 
+![Project Artifacts Delivery Timeline](/assets/artifacts_gantt.png)
+
 | Atividades | Data | Prof | Eixo | Unidade |
 |---|---|---|---|---|
 | Sprint Planning 1 | 15/10/2025 | Hermano | - | Sprint Planning |
