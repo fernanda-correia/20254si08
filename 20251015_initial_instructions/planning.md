@@ -2,7 +2,7 @@
 
 ## Sprint 1 - Weeks 1-2 Activities Overview
 
-![Project Artifacts Delivery Timeline](/assets/artifacts_gantt.png)
+![Project Deliverables Delivery Timeline](/assets/deliverables_gantt.png)
 
 | Atividades | Data | Prof | Eixo | Unidade |
 |---|---|---|---|---|
