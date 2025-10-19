@@ -1,249 +1,260 @@
-# Module 8 Guidelines
+# SI08 - Advanced Data Engineering Module
 
-This document establishes clear guidelines for the use of best practices in software development, aiming for code organization and quality. All students must follow the instructions below:
+## Project Overview
 
-## **Conventional Commits Usage**
+**TAPI Project:** Creation of a solution for an application using Natural Language for awareness of the preservation of natural means/resources
 
-- **Mandatory Standard**: All commits must follow the **Conventional Commits** specification. This means that each commit message must be structured as follows:
+**Company:** SKZ Oberle LTDA - Corporate solutions hub with 80+ years of market experience in accounting, financial BPO, and tax consulting.
 
-    `<type>[optional scope]: <short description>
-    
-    [optional detailed description]`
-    
-    Examples of types include:
-    - **`feat`**: new functionality
-    - **`fix`**: bug fix
-    - **`docs`**: documentation changes
-    - **`refactor`**: code refactoring
-    - **`test`**: test addition or modification
-- **Prohibitions**: Emojis in commit messages will not be accepted, nor commits that do not follow the established standard. Vague or generic messages such as "improvements" or "updates" are unacceptable.
+**Supervising Professor:** Hermano Peixoto
 
-## **Documentation**
+## Project Team
 
-- **Accepted Formats**: Documentation must be presented in two platforms: **MkDocs** and in the project office standard. Students can copy and paste information between these platforms, but must adjust the content to ensure clarity and adequacy to the required format.
+- **Project Leader:** Fabio Oberle (Commercial Director)
+- **Technical Leader:** Kaic Fachinetti (Developer)
+- **Business Leader:** Ricardo Evangelista (Data Analyst)
+- **Executive Leader:** Alexandre Tamura (IT Director)
+- **Backup Focal Point:** Paulo Ricardo (Developer)
 
-## **Deliverable Analysis**
+## Problem Statement
 
-- **Main Branch Review**: All sprint deliveries will be analyzed directly on the **main** branch of the repository. It is essential that students follow the **GitFlow** pattern, which is a branching model that organizes development into different types of branches.
+SKZ Oberle lacks a unified and accessible data infrastructure for fast, traceable, and secure access to accounting, tax, and financial information. Data is fragmented across multiple sources (ERP systems, SQL databases, spreadsheets, manual files), hindering analytical solutions and future AI integrations.
 
-## **What is GitFlow?**
+## Project Objective
 
-It is a popular Git branching strategy, introduced by Vincent Driessen in 2010, which aims to simplify release management. It uses several main branches and defines specific roles for each of them:
+Establish a robust corporate data platform by integrating, organizing, and centralizing accounting, tax, and financial data. Build a structured, secure, and auditable foundation for efficient internal data consumption and future natural language-based AI financial assistant implementation.
 
-1. **Main**: Contains production-ready code.
-2. **Develop**: Serves as an integration branch where new features are combined before being released.
-3. **Feature Branches**: Created from the develop branch to work on new features.
-4. **Release Branches**: Used to prepare new versions before final release.
-5. **Hotfix Branches**: Created from main to quickly fix critical issues.
+## Expected Benefits
 
-The typical GitFlow involves creating a develop branch from main, adding new features in feature branches, and when everything is ready, merging these changes into develop and, eventually, into main.
+- Automated data ingestion from multiple sources (ERPs, SQL databases, spreadsheets)
+- Data organization, cleaning, standardization, and enrichment
+- Centralized storage in Data Lake or Data Warehouse
+- Data availability through APIs, data views, or query tools
+- Implementation of security, access control, and traceability policies
 
-## **Code Quality**
+## Project Scope
 
-- **Clean Code**: Code must be written in a way that does not require extensive comments to be understood. This means that everyone must strictly follow the **object-oriented programming** standard, applying principles such as encapsulation, inheritance, and polymorphism in packages and ETLs (Extract, Transform, Load).
+### MVP Deliverable
+First version of Big Data pipeline integrating and centralizing SKZ Oberle's main accounting, tax, and financial data with automated ingestion, structured storage, and controlled access.
 
-## **Development Environment Requirements**
+### Sprint Deliverables
+- **Sprint 1:** User understanding and business understanding
+- **Sprint 2:** Data ingestion system
+- **Sprint 3:** Data Lake or Data Warehouse
+- **Sprint 4:** Statistical analysis without refinement
+- **Sprint 5:** Infographic from statistical analysis
 
-### **Mandatory Environment Setup**
+## Technical Requirements
 
-**⚠️ CRITICAL: All team members must have the EXACT same development environment to ensure project compatibility and avoid "works on my machine" issues.**
+### Development Environment (Mandatory)
+- **Node.js:** v20.x LTS
+- **Python:** 3.12.x
+- **Poetry:** Python dependency management
+- **Git:** Version control
+- **Docker:** Containerized environment
 
-#### **Required Software Versions (Standardized for All Students):**
+### Infrastructure
+- Project must run in Dockerized environment
+- Minimum 1 GB dataset simulation
+- Azure resources available (no dedicated data infrastructure yet)
 
-1. **Node.js and npm**
-   ```bash
-   # Install Node.js 20.x LTS (Long Term Support)
-   # Download from: https://nodejs.org/
-   # Verify installation:
-   node --version  # Should show v20.x.x
-   npm --version   # Should show 10.x.x
-   ```
+## Development Standards
 
-2. **Python 3.12.x**
-   ```bash
-   # Install Python 3.12.x (latest patch version)
-   # Download from: https://www.python.org/downloads/
-   # Verify installation:
-   python --version  # Should show Python 3.12.x
-   pip --version     # Should show pip 23.x.x or higher
-   ```
+### Conventional Commits (Mandatory)
+**Format:** `<type>[optional scope]: <description>`
 
-3. **Poetry (Python Dependency Management)**
-   ```bash
-   # Install Poetry
-   curl -sSL https://install.python-poetry.org | python3 -
-   
-   # Add to PATH (add to ~/.bashrc or ~/.zshrc)
-   export PATH="$HOME/.local/bin:$PATH"
-   
-   # Verify installation
-   poetry --version
-   ```
+**Types:**
+- `feat`: New functionality
+- `fix`: Bug fixes
+- `docs`: Documentation changes
+- `refactor`: Code refactoring
+- `test`: Test additions/modifications
+- `build`: Build system changes
+- `ci`: CI/CD changes
+- `chore`: Maintenance tasks
 
-#### **Environment Verification Checklist:**
-- [ ] Node.js v20.x.x installed and working
-- [ ] npm v10.x.x installed and working  
-- [ ] Python 3.12.x installed and working
-- [ ] Poetry installed and working
-- [ ] Git installed and configured
-- [ ] All tools accessible from command line
+**Rules:**
+- Present tense, imperative mood
+- Max 72 characters for first line
+- No periods at end of description
+- No emojis or vague messages
 
-#### **Project Local Execution Requirement:**
-**🚨 SPRINT CHECKLIST ITEM: The project MUST run locally on ALL team members' computers without any environment-specific issues.**
+### GitFlow Workflow
+- **Main:** Production-ready code
+- **Develop:** Integration branch for features
+- **Feature Branches:** Individual feature development
+- **Release Branches:** Pre-release preparation
+- **Hotfix Branches:** Critical bug fixes
 
-**Before each sprint delivery, verify:**
-- [ ] Project runs locally on your machine
-- [ ] All dependencies install correctly
-- [ ] No missing environment variables
-- [ ] All scripts execute without errors
-- [ ] Documentation includes setup instructions
+### Code Quality Standards
+- **Clean Code:** Self-documenting code without extensive comments
+- **OOP Principles:** Encapsulation, inheritance, polymorphism
+- **ETL Best Practices:** Well-structured Extract, Transform, Load processes
+- **Documentation:** MkDocs and project office standards
 
-## **Development Tools Setup**
+## Module Structure
 
-### **Qwen Code CLI Installation**
+### Week 02 - Advanced Exploratory Data Analysis & Data Architecture
 
-Qwen Code CLI is an AI-powered tool that helps generate conventional commits and assists with code analysis.
+#### 1. Advanced Exploratory Data Analysis with Jupyter + Poetry
+- Jupyter Notebook best practices
+- Poetry for dependency management
+- Advanced data visualization techniques
+- Statistical analysis and hypothesis testing
+- Data quality assessment and profiling
 
-#### **Installation on Linux/macOS:**
+#### 2. Data Lake Creation and Management
+- Data Lake architecture patterns
+- Data ingestion strategies
+- Data partitioning and optimization
+- Metadata management
+- Data governance principles
+
+#### 3. Data Architecture with UML Component Diagrams (Medallion Architecture)
+- Medallion Architecture (Bronze, Silver, Gold layers)
+- UML Component Diagrams for data systems
+- Data flow design and documentation
+- Scalability and performance considerations
+- Integration patterns
+
+#### 4. Data Pricing and Cost Optimization
+- Cloud data platform pricing models
+- Cost optimization strategies
+- Resource allocation and monitoring
+- ROI analysis for data projects
+- Budget planning and forecasting
+
+## Timeline and Milestones
+
+### Phase 1: Foundation (Weeks 1-2)
+- Environment setup and tooling
+- Basic data analysis techniques
+- Git workflow establishment
+- Initial architecture planning
+
+### Phase 2: Advanced Analysis (Weeks 3-4)
+- Advanced exploratory data analysis
+- Data quality assessment
+- Statistical analysis implementation
+- Visualization and reporting
+
+### Phase 3: Architecture and Implementation (Weeks 5-6)
+- Medallion architecture design
+- Data pipeline implementation
+- UML documentation
+- Cost optimization analysis
+
+### Phase 4: Integration and Optimization (Weeks 7-8)
+- System integration
+- Performance optimization
+- Documentation completion
+- Final presentation and review
+
+## Assessment Criteria
+
+### Technical Implementation (40%)
+- Code quality and architecture
+- Functionality and performance
+- Best practices adherence
+
+### Documentation (30%)
+- Technical documentation quality
+- Architecture diagrams and specifications
+- Process documentation
+
+### Professional Practices (30%)
+- Git workflow compliance
+- Commit message standards
+- Collaboration and communication
+
+## Tools and Technologies
+
+### Development Environment
+- **Python:** Primary programming language
+- **Jupyter Notebooks:** Interactive development and analysis
+- **Poetry:** Dependency management
+- **Git:** Version control
+- **MkDocs:** Documentation generation
+
+### Data Platforms
+- **Cloud Platforms:** AWS, Azure, or GCP
+- **Data Storage:** Data Lakes, Data Warehouses
+- **Processing:** Spark, Pandas, Dask
+- **Visualization:** Matplotlib, Seaborn, Plotly
+
+### Architecture Tools
+- **UML Tools:** Draw.io, Lucidchart, or similar
+- **Documentation:** MkDocs, Sphinx
+- **CI/CD:** GitHub Actions, GitLab CI, or similar
+
+## Development Tools Setup
+
+### Qwen Code CLI
 ```bash
 # Install via pip
 pip install qwen-code-cli
 
-# Or install via npm
-npm install -g qwen-code-cli
-```
-
-#### **Installation on Windows:**
-```powershell
-# Using pip
-pip install qwen-code-cli
-
-# Or using npm
-npm install -g qwen-code-cli
-```
-
-#### **Usage Examples:**
-```bash
-# Generate conventional commit message
-qwen-code commit -m "add new feature"
-
-# Analyze code changes
-qwen-code analyze
-
-# Generate commit with AI assistance
+# Usage
 qwen-code commit --ai
+qwen-code analyze
 ```
 
-### **GitHub CLI Installation**
-
-GitHub CLI (gh) allows you to create pull requests, manage issues, and interact with GitHub repositories directly from the command line.
-
-#### **Installation on Linux:**
+### GitHub CLI
 ```bash
-# Ubuntu/Debian
+# Linux
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
 sudo apt install gh
 
-# Or using snap
-sudo snap install gh
-```
-
-#### **Installation on macOS:**
-```bash
-# Using Homebrew
-brew install gh
-
-# Or using MacPorts
-sudo port install gh
-```
-
-#### **Installation on Windows:**
-
-**Step 1: Install Chocolatey (Package Manager for Windows)**
-```powershell
-# Run PowerShell as Administrator
-# Install Chocolatey
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-# Verify installation
-choco --version
-```
-
-**Step 2: Install GitHub CLI using Chocolatey**
-```powershell
-# Install GitHub CLI
-choco install gh
-
-# Verify installation
-gh --version
-```
-
-**Alternative methods:**
-```powershell
-# Using winget
-winget install GitHub.cli
-
-# Or using Scoop
-scoop install gh
-```
-
-#### **GitHub CLI Authentication:**
-```bash
-# Login to GitHub
+# Usage
 gh auth login
-
-# Follow the interactive prompts to authenticate
+gh pr create --title "feat(scope): add new functionality"
 ```
 
-#### **Usage Examples:**
-```bash
-# Create a new branch
-gh repo create-branch feature/new-feature
+## Project Restrictions
 
-# Create a pull request
-gh pr create --title "Add new feature" --body "Description of changes"
+- Integrations limited to explicitly mentioned systems
+- No advanced ML/neural networks beyond descriptive statistics
+- No front-end/dashboard development
+- No external data access or public APIs
+- 70 calendar days completion timeline
 
-# List pull requests
-gh pr list
+## Success Metrics
 
-# Review a pull request
-gh pr review <pr-number>
+### Technical Metrics
+- Code coverage and quality scores
+- Performance benchmarks
+- Architecture compliance
+- Documentation completeness
 
-# Merge a pull request
-gh pr merge <pr-number>
-```
+### Professional Metrics
+- Commit message compliance
+- Git workflow adherence
+- Collaboration effectiveness
+- Project delivery timeliness
 
-### **Recommended Workflow with Tools**
+## Resources
 
-1. **Create Feature Branch:**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+### Documentation
+- [Conventional Commits Specification](https://www.conventionalcommits.org/)
+- [GitFlow Documentation](https://nvie.com/posts/a-successful-git-branching-model/)
+- [Clean Code Principles](https://clean-code-developer.com/)
 
-2. **Make Changes and Commit:**
-   ```bash
-   # Use Qwen Code CLI for conventional commits
-   qwen-code commit --ai
-   # Or manually follow conventional commit format
-   git commit -m "feat(scope): add new functionality"
-   ```
+### Technical Resources
+- [Data Engineering Best Practices](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
+- [Medallion Architecture Guide](https://www.databricks.com/glossary/medallion-architecture)
+- [UML for Data Systems](https://www.uml.org/)
 
-3. **Push Changes:**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
+## Stakeholders
 
-4. **Create Pull Request:**
-   ```bash
-   gh pr create --title "feat(scope): add new functionality" --body "Detailed description of changes"
-   ```
+- **Marcio Tamura** - Executive Director
+- **Gustavo Prado** - Financial Director
+- **Adalberto Tamura** - Operations Director
+- **Fernando Oberle** - Technical Director
+- **Aloisio Defensor** - Operations Director - Portugal
+- **SKZ Oberle Team**
 
-5. **Review and Merge:**
-   ```bash
-   gh pr review <pr-number>
-   gh pr merge <pr-number>
-   ```
+---
 
-By following these guidelines, we ensure a more organized and collaborative development environment, facilitating communication between team members and improving the quality of the final product.
+*This module prepares students for real-world data engineering challenges with emphasis on clean code, proper documentation, and professional collaboration practices.*
