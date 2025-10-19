@@ -79,3 +79,26 @@ Your goal is to design a reproducible exploration that surfaces high-value custo
 - RDD usage demonstrates capabilities beyond simple DataFrame queries.
 - Insights tie directly to business questions and reference data lifecycle considerations.
 - Documentation enables peers to reproduce and extend the exploration.
+
+## Connection to Data Discovery with Data Model Canvas
+
+This **Advanced Exploratory Data Analysis** lesson serves as a fundamental foundation for developing the **Data Discovery with Data Model Canvas** artifact. The objective is to prepare each team to discover and explore relevant data for their respective data domains.
+
+### How this lesson supports the Data Model Canvas:
+
+1. **Data Discovery**: Advanced EDA techniques with PySpark enable teams to efficiently explore large volumes of data, identifying patterns, anomalies, and value opportunities in their specific domains.
+
+2. **Hypothesis Validation**: The exploratory analysis process helps validate or refine initial hypotheses about data, directly contributing to Data Model Canvas components:
+   - **Value Proposition**: Insights discovered during EDA ground the value proposition
+   - **Data Structure**: Analysis reveals the actual data structure and its relationships
+   - **User Profile**: Identified behavior patterns help define user profiles
+   - **Use Cases**: Analysis discoveries generate more realistic and data-driven use cases
+
+3. **Artifact Preparation**: This lesson provides the necessary technical tools for each team to:
+   - Process large volumes of data from their domain
+   - Identify data-driven innovation opportunities
+   - Generate insights that support the Data Model Canvas
+   - Document discoveries in a structured way
+
+### Next Steps:
+After completing this lesson, each team will be prepared to apply the learned techniques to their domain-specific data, generating insights that will directly feed into the Data Model Canvas development in the Week 02 artifact.
