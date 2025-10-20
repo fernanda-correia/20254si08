@@ -10,53 +10,7 @@
 | [The Easy Guide to Component Diagrams](https://creately.com/blog/software-teams/component-diagram-tutorial/) | UML Component Diagrams | Component notation, interfaces, dependencies, and best practices | 30 minutes |
 | [The Race For Data Quality in a Medallion Architecture](https://datakitchen.io/the-race-for-data-quality-in-a-medallion-architecture/) | Data Quality in Medallion Architecture | Quality controls, monitoring, and governance across architecture layers | 25 minutes |
 
-### Study Focus Areas
-
-#### 1. Medallion Architecture Case Study
-- **Key Learning**: How e-commerce companies implement Bronze, Silver, Gold layers
-- **Application**: Apply similar patterns to SKZ Oberle's accounting and financial data
-- **Takeaways**: Data transformation strategies, quality gates, and business value creation
-
-#### 2. UML Component Diagrams
-- **Key Learning**: Component notation, interfaces, and architectural visualization
-- **Application**: Design SKZ Oberle's data platform component architecture
-- **Takeaways**: System modularity, interface design, and dependency management
-
-#### 3. Data Quality in Medallion Architecture
-- **Key Learning**: Quality controls and monitoring across architecture layers
-- **Application**: Implement robust data quality for financial and accounting data
-- **Takeaways**: Quality metrics, monitoring strategies, and governance frameworks
-
-### Pre-Class Preparation
-
-Before attending this lesson, students should:
-
-1. **Read the Medallion Architecture case study** and identify:
-   - How Bronze, Silver, Gold layers are implemented
-   - Data transformation patterns used
-   - Quality controls and monitoring approaches
-
-2. **Study UML component diagrams** and understand:
-   - Component notation and symbols
-   - Interface types (provided/required)
-   - Dependency relationships and assembly connectors
-
-3. **Review data quality frameworks** and prepare to discuss:
-   - Quality metrics and monitoring
-   - Governance and compliance requirements
-   - Performance and scalability considerations
-
-### Discussion Questions
-
-After completing the self-study, students should be prepared to discuss:
-
-1. How would you adapt the e-commerce Medallion Architecture case study for SKZ Oberle's accounting and financial data?
-
-2. What are the key components needed for SKZ Oberle's data platform, and how would they interact?
-
-3. How would you implement data quality controls across the Bronze, Silver, and Gold layers for financial data?
-
-4. What are the main challenges in designing a component-based architecture for enterprise data platforms?
+ 
 
 ## Case Study: Medallion Architecture in E-Commerce
 
@@ -80,6 +34,8 @@ Based on [Creately's Component Diagram Tutorial](https://creately.com/blog/softw
 - **Interfaces**: How components interact (provided/required)
 - **Dependencies**: Relationships between components
 - **Ports**: Delegation points for internal interactions
+
+Suggested tools for diagramming: [Lucidchart](https://www.lucidchart.com) and [draw.io (diagrams.net)](https://www.diagrams.net/).
 
 ### Big Data Architecture Components
 
